@@ -3,6 +3,7 @@ package com.java_base.socktet.tcp_img;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Random;
 
 /**
  * TCP图片上传服务器
@@ -34,7 +35,14 @@ public class TCPServer {
         /**
          * 将文件写入目标文件夹
          */
-        FileOutputStream outputStream = new FileOutputStream(upload+"\\泰国潘婷励志广告.flv");
+
+        //FileOutputStream outputStream = new FileOutputStream(upload+"\\泰国潘婷励志广告.flv");
+
+        String fileName = System.currentTimeMillis()+""+new Random().nextInt(999999);
+        FileOutputStream outputStream = new FileOutputStream(upload+File.separator+fileName+".flv");
+
+
+
         byte[] bytes = new byte[1024];
         int len=0;
         int index = 0;
