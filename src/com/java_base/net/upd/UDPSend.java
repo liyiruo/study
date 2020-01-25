@@ -1,10 +1,7 @@
-package com.java_base.socktet.upd2;
+package com.java_base.net.upd;
 
 import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
-import java.util.Scanner;
+import java.net.*;
 
 /**
  * 实现UDP協議的發送端:
@@ -19,27 +16,18 @@ import java.util.Scanner;
  */
 public class UDPSend {
     public static void main(String[] args) throws IOException {
-
-        System.out.println("请输入：");
-        Scanner scanner = new Scanner(System.in);
-
+        //创建数据包对象，封装发送的数据，接受IP，端口
+        byte[] date = "你好啊，UDP".getBytes();
         //创建InetAddress对象，封装自己的IP地址
         InetAddress inet = InetAddress.getByName("127.0.0.1");
+        //四个参数分别为： 数组，发送数组中数据的长度，发送的地址，发送的端口
+        DatagramPacket dp = new DatagramPacket(date, date.length, inet, 6000);
         //创建DatagramSocket对象，数据包的发送和接受
         DatagramSocket ds = new DatagramSocket();
-        while (true) {
-            String message = scanner.nextLine();
-            //创建数据包对象，封装发送的数据，接受IP，端口
-            byte[] date = message.getBytes();
-            //四个参数分别为： 数组，发送数组中数据的长度，发送的地址，发送的端口
-            DatagramPacket dp = new DatagramPacket(date, date.length, inet, 6000);
-
-            //电泳ds对象的方法send,发送数据
-            ds.send(dp);
-        }
-
+        //电泳ds对象的方法send,发送数据
+        ds.send(dp);
         //关闭资源
-        //  ds.close();
+        ds.close();
     }
 
 

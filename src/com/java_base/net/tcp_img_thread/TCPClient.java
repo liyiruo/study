@@ -1,4 +1,4 @@
-package com.java_base.socktet.tcp_img;
+package com.java_base.net.tcp_img_thread;
 
 import java.io.*;
 import java.net.Socket;

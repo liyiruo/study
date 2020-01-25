@@ -1,4 +1,4 @@
-package com.java_base.socktet.tcp_img;
+package com.java_base.net.tcp_img;
 
 import java.io.*;
 import java.net.ServerSocket;

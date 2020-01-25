@@ -1,4 +1,4 @@
-package com.java_base.socktet.upd;
+package com.java_base.net.upd2;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -27,22 +27,26 @@ public class UDPRecive {
         DatagramSocket ds = new DatagramSocket(6000);
         //创建字节数组
         byte[] data = new byte[1024];
-    //创建数据包接收，传递字节数组
-        DatagramPacket dp = new DatagramPacket(data, data.length);
+        while (true) {
+
+            //创建数据包接收，传递字节数组
+            DatagramPacket dp = new DatagramPacket(data, data.length);
     /*
     调用DatagramSocket对象方法receive(DatagramPacket dp)
     接收数据数据放在数据包中
     */
-        ds.receive(dp);
-        //获取IP地址
-        String ip = dp.getAddress().getHostAddress();
-        //获取名称
-        String name = dp.getAddress().getHostName();
-        //获取端口号
-        int port = dp.getPort();
-        //输出数据
-        System.out.println(new String(data,0,dp.getLength())+"\n name: "+name+"\n ip: "+ip+"\n port: "+port);
+            ds.receive(dp);
+            //获取IP地址
+            String ip = dp.getAddress().getHostAddress();
+            //获取名称
+            String name = dp.getAddress().getHostName();
+            //获取端口号
+            int port = dp.getPort();
+            //输出数据
+            System.out.println(new String(data,0,dp.getLength())+" name: "+name+" ip: "+ip+" port: "+port);
 
-        ds.close();
+        }
+
+       // ds.close();
     }
 }

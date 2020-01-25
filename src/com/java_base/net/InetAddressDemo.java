@@ -1,4 +1,4 @@
-package com.java_base.socktet;
+package com.java_base.net;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
