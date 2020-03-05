@@ -1,4 +1,5 @@
-package com.function;
+package main.java.com.function;
+
 
 import com.alibaba.fastjson.JSON;
 
