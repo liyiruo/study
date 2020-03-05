@@ -1,4 +1,4 @@
-package main.java.com.线程.thread.threadEXT;
+package com.线程.thread.threadEXT;
 
 /**
  * 通过继承Thread的方式

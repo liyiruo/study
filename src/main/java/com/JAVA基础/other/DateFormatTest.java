@@ -1,4 +1,4 @@
-package main.java.com.JAVA基础.other;
+package com.JAVA基础.other;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package main.java.com.线程.thread.threadIMP;
+package com.线程.thread.threadIMP;
 
 public class ThreadIMP implements Runnable{
     @Override

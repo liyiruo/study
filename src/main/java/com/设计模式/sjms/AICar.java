@@ -1,4 +1,4 @@
-package com.sjms;
+package com.设计模式.sjms;
 
 //ConcreteDecorator具体装饰角色
 public class AICar extends SuperCar {

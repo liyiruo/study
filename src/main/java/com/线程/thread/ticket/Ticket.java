@@ -1,4 +1,4 @@
-package main.java.com.线程.thread.ticket;
+package com.线程.thread.ticket;
 
 public class Ticket implements Runnable {
     private int ticket = 100;

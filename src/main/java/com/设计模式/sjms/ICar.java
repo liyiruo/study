@@ -1,4 +1,4 @@
-package com.sjms;
+package com.设计模式.sjms;
 
 /***
  * 抽象组件

@@ -1,4 +1,4 @@
-package main.java.com.线程.thread.threadINS;
+package com.线程.thread.threadINS;
 
 public class NoNameInnerClassThread {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package main.java.com.JAVA基础.array;
+package com.JAVA基础.array;
 
 
 import java.util.*;

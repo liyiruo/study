@@ -1,4 +1,4 @@
-package com.sjms;
+package com.设计模式.sjms;
 
 //ConcreteComponent 具体构件角色(真实对象)
 public class Car implements ICar {

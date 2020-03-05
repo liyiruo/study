@@ -1,4 +1,4 @@
-package main.java.com.线程.thread.ticket;
+package com.线程.thread.ticket;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

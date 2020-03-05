@@ -1,4 +1,4 @@
-package com.sjms2.zsqms;
+package com.设计模式.sjms2.zsqms;
 
 public class WaterCar extends SuperCar {
     public WaterCar(ICar car) {

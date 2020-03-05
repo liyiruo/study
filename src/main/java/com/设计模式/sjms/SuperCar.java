@@ -1,4 +1,4 @@
-package com.sjms;
+package com.设计模式.sjms;
 
 public class SuperCar implements ICar {
     private ICar car;
