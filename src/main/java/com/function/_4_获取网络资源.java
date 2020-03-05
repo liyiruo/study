@@ -1,4 +1,4 @@
-package main.java.com.function;
+package com.function;
 
 
 import com.alibaba.fastjson.JSON;
@@ -8,8 +8,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
-
-public class MyTest {
+/**
+ * 从网上获取资源
+ * 读取并解析json文件: http://123.56.191.196:8080/a/a/d/list_slide_1_0.json，必须是在线读取。
+ * 把里面的图片下载到本地，并打印出图片文件名和文件大小。
+ */
+public class _4_获取网络资源 {
 
     public static void main(String[] args) {
         String Jsonurl = "http://123.56.191.196:8080/a/a/d/list_slide_1_0.json";
@@ -29,8 +33,6 @@ public class MyTest {
         }
     }
 
-
-
     /**
      * 读取json文件
      *
@@ -42,7 +44,6 @@ public class MyTest {
         try {
             URL url = new URL(jsonUrl);
             InputStream is = url.openStream();
-
             BufferedInputStream bis = new BufferedInputStream(is);
             sb = new StringBuffer("");
             int len = 0;
@@ -97,7 +98,8 @@ public class MyTest {
         byte[] data = readInputStream(inStream);
         // 文件大小byte
         int length = data.length;
-        System.out.println(fileName+"：文件大小"+length/1024+"k");
+        final  String savePath = "src/main/java/com/function/";
+        System.out.println(savePath+fileName+"：文件大小"+length/1024+"k");
         //new一个文件对象用来保存图片，默认保存当前工程根目录
         File imageFile = new File(fileName);
         //创建输出流
