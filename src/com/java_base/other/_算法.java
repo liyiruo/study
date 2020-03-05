@@ -3,7 +3,7 @@ package com.java_base.other;
 /**
  * 有一个字符串 以逗号分割（小于100个），以这个字符串的后一位的ascii 大小排序 输出
  */
-public class MainTest {
+public class _算法 {
 
     public static void main(String[] args) {
         String s = "a1,d2,f3,g4,h5,ja,kb,8c,9d,0e,fe";
