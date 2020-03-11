@@ -1,4 +1,4 @@
-package com.emun;
+package com.枚举.emun;
 
 public enum SeasonEunm {
     //每一个枚举变量都是枚举类SeasonEunm的实例化

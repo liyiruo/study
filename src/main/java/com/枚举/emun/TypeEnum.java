@@ -1,4 +1,4 @@
-package com.emun;
+package com.枚举.emun;
 
 public enum TypeEnum {
     FIREWALL("firewall"),

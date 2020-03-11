@@ -1,4 +1,4 @@
-package main.java.com.JAVA基础.位运算;
+package com.JAVA基础.位运算;
 
 public class YSF {
 

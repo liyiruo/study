@@ -1,4 +1,4 @@
-package main.java.com.算法;
+package com.算法;
 
 /**
  * 有一个字符串 以逗号分割（小于100个），以这个字符串的后一位的ascii 大小排序 输出

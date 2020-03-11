@@ -1,4 +1,4 @@
-package com.single;
+package com.设计模式.single;
 
 public class TestSingleton {
     private static TestSingleton ourInstance = new TestSingleton();

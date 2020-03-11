@@ -1,4 +1,4 @@
-package main.java.com.JAVA基础.other;
+package com.JAVA基础.other;
 
 /**
  * 把类型作为一个参数

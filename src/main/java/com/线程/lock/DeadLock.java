@@ -1,4 +1,4 @@
-package main.java.com.线程.lock;
+package com.线程.lock;
 
 public class DeadLock {
 

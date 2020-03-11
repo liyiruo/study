@@ -1,4 +1,4 @@
-package main.java.com.算法;
+package com.算法;
 
 public class TestFind {
 
