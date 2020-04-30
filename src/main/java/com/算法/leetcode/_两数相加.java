@@ -1,9 +1,6 @@
 package com.算法.leetcode;
 
-import com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo;
-
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * 给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。
@@ -69,7 +66,6 @@ public class _两数相加 {
                 val = val - 10;
             }
             list3.addLast(val);
-
             System.out.println("list3==>" + list3);
         }
         //将链表里的数据取出 放入节点里
@@ -93,7 +89,7 @@ public class _两数相加 {
 //        n.next = new ListNode(4);
 //        n.next.next = new ListNode(3);
 
-//342+465=807 ==》2 2 8
+        //342+465=807 ==》2 2 8
         ListNode m = new ListNode(5);
 //        m.next = new ListNode(6);
 //        m.next.next = new ListNode(4);
@@ -121,6 +117,8 @@ public class _两数相加 {
  *     ListNode(int x) { val = x; }
  * }
  */
+
+//别人写的方法
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode pre = new ListNode(0);
@@ -149,16 +147,5 @@ class Solution {
 }
 
 
-
-
-// Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
 
 
