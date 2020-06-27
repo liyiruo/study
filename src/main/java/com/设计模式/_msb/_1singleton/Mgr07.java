@@ -1,4 +1,4 @@
-package com.设计模式._1singleton;
+package com.设计模式._msb._1singleton;
 
 /**
  * 静态内部类方式

@@ -1,24 +1,25 @@
-package com.设计模式._1singleton;
+package com.设计模式._msb._1singleton;
 
 /**
  * lazy loading
  * 也称懒汉式
  * 虽然达到了按需初始化的目的，但却带来线程不安全的问题
+ * 可以通过synchronized解决，但也带来效率下降
  */
-public class Mgr03 {
-    private static Mgr03 INSTANCE;
+public class Mgr04 {
+    private static Mgr04 INSTANCE;
 
-    private Mgr03() {
+    private Mgr04() {
     }
 
-    public static Mgr03 getInstance() {
+    public static synchronized Mgr04 getInstance() {
         if (INSTANCE == null) {
             try {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            INSTANCE = new Mgr03();
+            INSTANCE = new Mgr04();
         }
         return INSTANCE;
     }
@@ -29,9 +30,9 @@ public class Mgr03 {
 
     public static void main(String[] args) {
         for(int i=0; i<100; i++) {
-            new Thread(()->
-                System.out.println(Mgr03.getInstance().hashCode())
-            ).start();
+            new Thread(()->{
+                System.out.println(Mgr04.getInstance().hashCode());
+            }).start();
         }
     }
 }
