@@ -1,4 +1,4 @@
-package com.设计模式.single;
+package com.设计模式._单例模式;
 
 /**
  * 懒汉模式 线程不安全

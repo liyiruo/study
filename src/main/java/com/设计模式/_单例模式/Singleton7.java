@@ -1,4 +1,4 @@
-package com.设计模式.single;
+package com.设计模式._单例模式;
 
 /**设计模式 单例模式 静态内部类 懒加载
  * @author liyiruo

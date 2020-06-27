@@ -1,4 +1,4 @@
-package com.设计模式.single;
+package com.设计模式._单例模式;
 
 /**
  * 设计模式之懒汉模式 双重验证

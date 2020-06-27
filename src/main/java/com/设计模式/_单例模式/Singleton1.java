@@ -1,4 +1,4 @@
-package com.设计模式.single;
+package com.设计模式._单例模式;
 
 /**
  * 设计模式单例模式 饿汉模式 线程安全
