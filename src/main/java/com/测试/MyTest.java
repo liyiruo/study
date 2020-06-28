@@ -17,14 +17,10 @@ public class MyTest {
         Condition condition=new Condition() {
             @Override
             public void await() throws InterruptedException {
-
             }
-
             @Override
             public void awaitUninterruptibly() {
-
             }
-
             @Override
             public long awaitNanos(long nanosTimeout) throws InterruptedException {
                 return 0;
@@ -34,29 +30,22 @@ public class MyTest {
             public boolean await(long time, TimeUnit unit) throws InterruptedException {
                 return false;
             }
-
             @Override
             public boolean awaitUntil(Date deadline) throws InterruptedException {
                 return false;
             }
-
             @Override
             public void signal() {
-
             }
-
             @Override
             public void signalAll() {
-
             }
         };
         Lock lock=new ReentrantLock();
-
         try {
             TimeUnit.MICROSECONDS.sleep(1);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 }
