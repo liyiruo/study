@@ -8,12 +8,16 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @author liyiruo
+ */
 public class MyTest {
     public static void main(String[] args) {
         //类加载器
         ClassLoader c = new ClassLoader();
         long nanoTime = System.nanoTime();
         System.out.println("nanoTime===>"+nanoTime);
+        //这个类是关于锁的。
         Condition condition=new Condition() {
             @Override
             public void await() throws InterruptedException {
