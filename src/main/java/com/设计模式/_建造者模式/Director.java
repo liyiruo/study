@@ -8,7 +8,7 @@ public class Director {
     }
 
     //产品构建与组装方法
-    public Product construct() {
+    Product construct() {
         builder.buildPartA();
         builder.buildPartB();
         builder.buildPartC();
