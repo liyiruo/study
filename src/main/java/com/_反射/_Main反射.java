@@ -1,4 +1,4 @@
-package com.测试;
+package com._反射;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -10,7 +10,7 @@ public class _Main反射 {
         /*
          * 通过反射获取一个类，并获取其实例
          */
-        Class clazz = Class.forName("com.测试.TestReflect");
+        Class clazz = Class.forName("com._反射.TestReflect");
         Object o = clazz.newInstance();
         /*获取其某个方法，需要传入方法名称，和参数类型*/
         Method doSome = clazz.getMethod("doSome", String.class);

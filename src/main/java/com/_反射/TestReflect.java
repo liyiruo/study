@@ -1,4 +1,4 @@
-package com.测试;
+package com._反射;
 
 /**
  * 反射 得到这个类的方法和字段
