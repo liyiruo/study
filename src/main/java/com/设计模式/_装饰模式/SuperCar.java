@@ -1,5 +1,8 @@
-package com.设计模式.sjms2.zsqms;
+package com.设计模式._装饰模式;
 
+/**
+ * @author liyiruo
+ */
 public class SuperCar implements ICar {
     private ICar car;
     public SuperCar(ICar car) {
@@ -9,4 +12,5 @@ public class SuperCar implements ICar {
     public void move() {
         car.move();
     }
+
 }

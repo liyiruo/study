@@ -1,6 +1,9 @@
-package com.设计模式.sjms;
+package com.设计模式._装饰模式;
 
-//ConcreteComponent 具体构件角色(真实对象)
+/**
+ * 普通的汽车
+ * @author liyiruo
+ */
 public class Car implements ICar {
 
     @Override

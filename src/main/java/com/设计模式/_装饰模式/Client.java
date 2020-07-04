@@ -1,4 +1,4 @@
-package com.设计模式.sjms2.zsqms;
+package com.设计模式._装饰模式;
 
 public class Client {
     public static void main(String[] args) {
@@ -16,11 +16,11 @@ public class Client {
         waterCar.move();
 
         System.out.println("增加两个新的功能，飞行，水里游------------------");
-        WaterCar waterCar2 = new WaterCar(new FlyCar(car));
+       WaterCar waterCar2 = new WaterCar(new FlyCar(car));
         waterCar2.move();
 
         System.out.println("增加3个新的功能，飞行，水里游------------------");
-        WaterCar waterCar3 = new WaterCar(new FlyCar(new AICar(car)));
+       WaterCar waterCar3 = new WaterCar(new FlyCar(new AICar(car)));
         waterCar3.move();
 
     }
