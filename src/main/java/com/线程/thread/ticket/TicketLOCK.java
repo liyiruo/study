@@ -5,25 +5,23 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class TicketLOCK implements Runnable {
     private int ticket = 100;
-    Lock lock = new ReentrantLock();
+    private Lock lock = new ReentrantLock();
 
     @Override
     public void run() {
         while (true) {
             lock.lock();
-                //获取当前线程的名称
-                if (ticket > 0) {
-                    try {
-                        Thread.sleep(100);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    String name = Thread.currentThread().getName();
-                    System.out.println(name+"_正在卖："+"第"+(ticket--)+"张票");
+            //获取当前线程的名称
+            if (ticket > 0) {
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-
+                String name = Thread.currentThread().getName();
+                System.out.println(name+"_正在卖："+"第"+(ticket--)+"张票");
+            }
             lock.unlock();
-
         }
     }
 

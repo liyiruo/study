@@ -23,7 +23,7 @@ public class Ticket implements Runnable {
 
     /**
      * 卖出的票会有负的。
-     * @param args
+     * @param args 参数
      */
     public static void main(String[] args) {
         Ticket ticket = new Ticket();

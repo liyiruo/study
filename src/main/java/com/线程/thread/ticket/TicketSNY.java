@@ -2,7 +2,7 @@ package com.线程.thread.ticket;
 
 public class TicketSNY implements Runnable {
     private int ticket = 100;
-    Object lack = new Object();
+    private final Object lack = new Object();
 
     @Override
     public void run() {

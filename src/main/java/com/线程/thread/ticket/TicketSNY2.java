@@ -1,5 +1,9 @@
 package com.线程.thread.ticket;
 
+/**
+ *
+ * @author liyiruo
+ */
 public class TicketSNY2 implements Runnable {
     private int ticket = 100;
     Object lack = new Object();
