@@ -1,6 +1,7 @@
 package com.线程.thread.threadINS;
 
 /**
+ * 创建线程
  * @author liyiruo
  */
 public class NoNameInnerClassThread {
@@ -9,7 +10,6 @@ public class NoNameInnerClassThread {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-
                 for (int i = 0; i < 20; i++) {
                     System.out.println(Thread.currentThread().getName()+" "+ i);
                 }
