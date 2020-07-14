@@ -8,7 +8,7 @@ public class RunnableImpl implements Runnable{
     @Override
     public void run() {
         for (int i = 0; i < 10; i++) {
-            System.out.println(Thread.currentThread().getName()+":"+i);
+            System.out.println(Thread.currentThread().getName()+":"+i+" "+System.currentTimeMillis());
         }
     }
 
@@ -17,7 +17,7 @@ public class RunnableImpl implements Runnable{
         RunnableImpl runnable = new RunnableImpl();
         //创建线程 传入2个参数；
         //Thread thread = new Thread(threadIMP,"i am threadName");
-        Thread thread = new Thread(runnable);
+        Thread thread = new Thread(runnable,"这是线程名称");
         //启动线程
         thread.start();
 
