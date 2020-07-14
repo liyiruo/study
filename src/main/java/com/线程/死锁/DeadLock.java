@@ -1,5 +1,14 @@
-package com.线程.lock;
+package com.线程.死锁;
 
+/**
+ * 测试死锁
+ * 死锁形成的条件
+ * 1.互次条件
+ * 2.不可剥夺条件
+ * 3.请求与保持条件
+ * 4.循环等待条件
+ * @author liyiruo
+ */
 public class DeadLock {
 
     public static void main(String[] args) {
@@ -13,11 +22,12 @@ public class DeadLock {
 class DeadLockTest implements Runnable{
 
     private boolean flag;
-    static Object obj1 = new Object();
-    static Object obj2 = new Object();
-    public DeadLockTest(boolean flag) {
+    private static final Object obj1 = new Object();
+    private static final Object obj2 = new Object();
+    DeadLockTest(boolean flag) {
         this.flag = flag;
     }
+    @Override
     public void run(){
         if(flag){
             synchronized(obj1){
