@@ -1,42 +1,39 @@
 package com.线程.thread.ticket;
 
+import com.tank.Main;
+
 /**
+ * 普通的卖票程序 不安全的 用Thread 调用
+ *
  * @author liyiruo
  */
-public class Ticket implements Runnable {
+public class TicketThread implements Runnable {
     private int ticket = 100;
-
     @Override
     public void run() {
         while (true) {
             if (ticket > 0) {
                 //获取当前线程的名称
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
                 String name = Thread.currentThread().getName();
-                System.out.println(name+"_正在卖："+"第"+(ticket--)+"张票");
-
+                System.out.println(name + "_正在卖：" + "第" + (ticket--) + "张票");
+            } else {
+                break;
             }
-
         }
     }
 
-    /**
-     * 卖出的票会有负的。
-     * @param args 参数
-     */
     public static void main(String[] args) {
-        Ticket ticket = new Ticket();
-        Thread thread1 = new Thread(ticket, "线程一");
-        Thread thread2 = new Thread(ticket, "线程二");
-        Thread thread3 = new Thread(ticket, "线程三");
-
+        Runnable target = new TicketThread();
+        Thread thread1 = new Thread(target);
+        Thread thread2 = new Thread(target);
+        Thread thread3 = new Thread(target);
         thread1.start();
         thread2.start();
         thread3.start();
-
     }
 }
