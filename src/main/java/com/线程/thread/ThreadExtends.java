@@ -1,4 +1,4 @@
-package com.线程.thread.threadEXT;
+package com.线程.thread;
 
 /**
  * 通过继承Thread的方式

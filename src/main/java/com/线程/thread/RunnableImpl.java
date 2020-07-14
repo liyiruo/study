@@ -1,4 +1,4 @@
-package com.线程.thread.threadIMP;
+package com.线程.thread;
 
 /**
  * 通过实现接口的方式的创建线程

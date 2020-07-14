@@ -1,4 +1,4 @@
-package com.线程.thread.threadINS;
+package com.线程.thread;
 
 /**
  *
