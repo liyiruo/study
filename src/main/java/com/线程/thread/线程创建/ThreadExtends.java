@@ -1,6 +1,4 @@
-package com.线程.thread;
-
-import java.util.Date;
+package com.线程.thread.线程创建;
 
 /**
  * 通过继承Thread的方式
