@@ -15,6 +15,9 @@ public class TankFrame extends Frame {
     private Dir dir = Dir.DOWN;
     private static final int SPEED = 10;
 
+    private Tank myTank = new Tank(200, 200, Dir.DOWN);
+
+
     TankFrame() {
         setResizable(false);
         setTitle("tank war");
@@ -29,35 +32,12 @@ public class TankFrame extends Frame {
             }
         });
     }
-
     @Override
     public void paint(Graphics g) {
-        g.setColor(Color.red);
-        g.fillRect(x, y, 50, 50);
-        //x+=10;
-        //y += 10;
-        // System.out.println("this is my word");
-
-        switch (dir) {
-
-            case DOWN:
-                y += SPEED;
-                break;
-            case UP:
-                y -= SPEED;
-                break;
-            case RIGHT:
-                x += SPEED;
-                break;
-            case LEFT:
-                x -= SPEED;
-                break;
-            default:
-                break;
-        }
-
-
+        myTank.paint(g);
     }
+
+
 
     private class MyKeyListener extends KeyAdapter {
 

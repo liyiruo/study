@@ -1,44 +1,36 @@
-package com.线程.thread.ticket;
-
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+package com.线程.thread.多线程卖票;
 
 /**
  * @author liyiruo
  */
-public class TicketLock implements Runnable {
+public class TicketSNY implements Runnable {
     private int ticket = 100;
-    private Lock lock = new ReentrantLock();
-
+    private final Object lack = new Object();
     @Override
     public void run() {
         while (true) {
-            lock.lock();
-            try {
+            synchronized (lack) {
+                //获取当前线程的名称
                 if (ticket > 0) {
                     try {
-                        Thread.sleep(10);
+                        Thread.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                     String name = Thread.currentThread().getName();
                     System.out.println(name + "_正在卖：" + "第" + (ticket--) + "张票");
-                } else {
-                    break;
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                lock.unlock();
             }
         }
     }
 
     /**
-     * 卖出的票会有负的，会吗
+     * 卖出的票会有负的。
+     *
+     * @param args
      */
     public static void main(String[] args) {
-        TicketLock ticket = new TicketLock();
+        TicketSNY ticket = new TicketSNY();
         Thread thread1 = new Thread(ticket, "线程一");
         Thread thread2 = new Thread(ticket, "线程二");
         Thread thread3 = new Thread(ticket, "线程三");

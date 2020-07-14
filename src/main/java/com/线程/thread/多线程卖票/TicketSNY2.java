@@ -1,4 +1,4 @@
-package com.线程.thread.ticket;
+package com.线程.thread.多线程卖票;
 
 /**
  * @author liyiruo

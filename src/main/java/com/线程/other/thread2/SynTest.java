@@ -1,4 +1,4 @@
-package com.thread2;
+package com.线程.other.thread2;
 
 public class SynTest {
     public static void main(String[] args) {
@@ -7,13 +7,15 @@ public class SynTest {
 }
 
 class CountDown implements Runnable{
-    int time = 10;
+    private int time = 10;
+    @Override
     public void run() {
         while (true) {
             if(time>=0){
                 System.out.println(Thread.currentThread().getName() + ":" + time--);
                 try {
-                    Thread.sleep(1000);                                                    //睡眠时间为1秒
+                    //睡眠时间为1秒
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

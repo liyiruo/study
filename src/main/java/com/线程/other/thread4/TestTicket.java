@@ -1,8 +1,11 @@
-package com.thread4;
+package com.线程.other.thread4;
 
+/**
+ * @author liyiruo
+ */
 public class TestTicket extends Thread {
     private  static int ticket=10;
-    Object object = new Object();
+    private Object object = new Object();
     @Override
     public  void run() {
 

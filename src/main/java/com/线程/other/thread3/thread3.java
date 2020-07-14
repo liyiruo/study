@@ -1,5 +1,4 @@
-package com.thread3;
-
+package com.线程.other.thread3;
 
 class RunnableDemo implements Runnable {
     private Thread t;
@@ -12,6 +11,7 @@ class RunnableDemo implements Runnable {
 
 
 
+    @Override
     public void run() {
         System.out.println("Running " +  threadName );
         try {

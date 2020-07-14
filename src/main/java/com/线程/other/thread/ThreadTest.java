@@ -1,4 +1,4 @@
-package com.thread;
+package com.线程.other.thread;
 
 public class ThreadTest {
     public static void main(String[] args) {

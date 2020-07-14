@@ -1,8 +1,7 @@
-package com.thread3;
+package com.线程.other.thread3;
 
 
 public class TestThread {
-
     public static void main(String args[]) {
         RunnableDemo R1 = new RunnableDemo( "Thread-1");
         R1.start();

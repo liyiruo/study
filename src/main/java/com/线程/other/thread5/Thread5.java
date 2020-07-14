@@ -1,8 +1,8 @@
-package com.thread5;
+package com.线程.other.thread5;
 
 public class Thread5 implements Runnable {
 
-    private int ticket =1000;
+    private int ticket =100;
     @Override
     public void run() {
 
