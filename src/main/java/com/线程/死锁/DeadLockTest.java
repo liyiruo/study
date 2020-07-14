@@ -1,4 +1,4 @@
-package com.线程.死锁.死锁2;
+package com.线程.死锁;
 
 /**
  * 用来测试死锁的主类

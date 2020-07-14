@@ -1,48 +1,46 @@
 package com.线程.死锁;
 
 /**
- * 测试死锁
- * 死锁形成的条件
- * 1.互次条件
- * 2.不可剥夺条件
- * 3.请求与保持条件
- * 4.循环等待条件
+ * 这是一个死锁的示例
  * @author liyiruo
  */
-public class DeadLock {
-
-    public static void main(String[] args) {
-        Thread t1 = new Thread(new DeadLockTest(true));
-        Thread t2 = new Thread(new DeadLockTest(false));
-        t1.start();
-        t2.start();
-    }
-}
-
-class DeadLockTest implements Runnable{
-
+public class DeadLock implements Runnable{
+    private final static Object object1 = new Object();
+    private  final static Object object2 = new Object();
     private boolean flag;
-    private static final Object obj1 = new Object();
-    private static final Object obj2 = new Object();
-    DeadLockTest(boolean flag) {
+    public DeadLock(boolean flag) {
         this.flag = flag;
     }
+
     @Override
-    public void run(){
-        if(flag){
-            synchronized(obj1){
-                System.out.println("if lock1");
-                synchronized (obj2) {
-                    System.out.println("if lock2");
+    public void run() {
+        if (flag) {
+            synchronized (object1) {
+                System.out.println("flag=true获取到了object1");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                synchronized (object2) {
+                    System.out.println("flag=true如果看到这个，那就出问题了");
                 }
             }
-        }else{
-            synchronized (obj2) {
-                System.out.println("else lock2");
-                synchronized (obj1) {
-                    System.out.println("else lock1");
+
+        } else {
+            synchronized (object2) {
+                System.out.println("flag=false获取到了object2");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                synchronized (object1) {
+                    System.out.println("flag=false如果看到这个，那就出问题了");
                 }
             }
+
         }
+
     }
 }
