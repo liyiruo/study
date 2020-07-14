@@ -3,6 +3,9 @@ package com.线程.thread.ticket;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @author liyiruo
+ */
 public class TicketLOCK implements Runnable {
     private int ticket = 100;
     private Lock lock = new ReentrantLock();
@@ -11,7 +14,6 @@ public class TicketLOCK implements Runnable {
     public void run() {
         while (true) {
             lock.lock();
-            //获取当前线程的名称
             if (ticket > 0) {
                 try {
                     Thread.sleep(100);

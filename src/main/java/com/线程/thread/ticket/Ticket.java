@@ -1,5 +1,8 @@
 package com.线程.thread.ticket;
 
+/**
+ * @author liyiruo
+ */
 public class Ticket implements Runnable {
     private int ticket = 100;
 
