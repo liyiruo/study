@@ -2,6 +2,7 @@ package com.线程.线程通信;
 
 /**
  * 线程之间是如何通信的
+ * 通过object 的wait  和  notify 进行唤醒
  *
  * @author liyiruo
  */
