@@ -1,15 +1,17 @@
 package com.线程._ThreadLocal;
 
 /**
+ * ThreadLocal是属于某个线程的，数据库的connection。
+ * 每个线程都需要，他们又互不影响，就是用这个来实现的。
  * @author liyiruo
- * @data 2020/3/6  9:26 下午
+ * @date 2020/3/6  9:26 下午
  */
 public class Basic {
 
     private static ThreadLocal<Long> x = new ThreadLocal<Long>() {
         @Override
         protected Long initialValue() {
-            System.out.println("Inital Value run ……");
+            System.out.println("Initial Value run ……");
             return Thread.currentThread().getId();
         }
     };
