@@ -11,7 +11,7 @@ class CountDown implements Runnable{
     @Override
     public void run() {
         while (true) {
-            if(time>=0){
+            if (time >= 0) {
                 System.out.println(Thread.currentThread().getName() + ":" + time--);
                 try {
                     //睡眠时间为1秒
@@ -19,6 +19,8 @@ class CountDown implements Runnable{
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+            } else {
+                break;
             }
         }
     }
