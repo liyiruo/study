@@ -1,4 +1,4 @@
-package com.线程.thread.多线程卖票;
+package com.线程.线程创建和安全.多线程卖票;
 
 /**
  * 普通的卖票程序 不安全的 用Thread 调用

@@ -1,4 +1,4 @@
-package com.线程.thread.多线程卖票;
+package com.线程.线程创建和安全.多线程卖票;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
