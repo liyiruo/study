@@ -1,6 +1,8 @@
 package com.线程._ThreadLocal;
 
 /**
+ * 用多线程操作一个有本地变量的银行，不同线程之间不会互相影响。
+ * 因为每个线程都有自己的本地变量ThreadLocal
  * @author liyiruo
  */
 public class ThreadLocalDemo {
