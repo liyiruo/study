@@ -28,11 +28,9 @@ import java.util.*;
  */
 public class _38外观数列 {
     public static void main(String[] args) {
-//        System.out.println(countAndSay(2));
-        String desc = desc("1211");
-        System.out.println(desc);
+        System.out.println(countAndSay(6));
+        System.out.println(function2(6));
     }
-
     public static String countAndSay(int n) {
         if (n == 1) {
             return String.valueOf(n);
@@ -72,4 +70,25 @@ public class _38外观数列 {
         }
         return buffer.toString();
     }
+
+    public static String function2(int n) {
+
+        if (n == 1) {
+            return "1";
+        }
+        StringBuffer res = new StringBuffer();
+        String str = countAndSay(n - 1);
+        int length = str.length();
+        int a = 0;
+        for (int i = 1; i < length + 1; i++) {
+            if (i == length) {
+                return res.append(i - a).append(str.charAt(a)).toString();
+            } else if (str.charAt(i) != str.charAt(a) ) {
+                res.append(i - a).append(str.charAt(a));
+                a = i;
+            }
+        }
+        return res.toString();
+    }
+
 }
