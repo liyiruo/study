@@ -2,6 +2,7 @@ package com.线程.线程创建和安全.线程创建;
 
 /**
  * 创建线程
+ *
  * @author liyiruo
  */
 public class NoNameInnerClassThread {
@@ -11,10 +12,19 @@ public class NoNameInnerClassThread {
             @Override
             public void run() {
                 for (int i = 0; i < 20; i++) {
-                    System.out.println(Thread.currentThread().getName()+" "+ i);
+                    System.out.println(Thread.currentThread().getName() + "==" + i);
                 }
             }
         };
         runnable.run();
+
+        //lambda表达式的写法
+        Runnable runnable2 = () -> {
+            for (int i = 0; i < 20; i++) {
+                System.out.println(Thread.currentThread().getName() + ">>>>>" + i);
+            }
+        };
+        runnable2.run();
     }
+
 }
