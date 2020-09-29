@@ -1,6 +1,7 @@
 package com.集合;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class MyCollection {
     public static void main(String[] args) {
@@ -117,6 +118,7 @@ public class MyCollection {
         Map map1 = new TreeMap();
         Map map2=new LinkedHashMap();
         Map map3 = new Hashtable();
+        Map map4 = new ConcurrentHashMap();
 
 
         Hashtable hashtable = new Properties();
