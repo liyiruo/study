@@ -1,4 +1,4 @@
-package main.java.com.网络编程.net.tcp_img;
+package com.网络编程.net.tcp_img;
 
 import java.io.*;
 import java.net.ServerSocket;

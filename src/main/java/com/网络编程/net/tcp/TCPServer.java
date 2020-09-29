@@ -1,4 +1,4 @@
-package main.java.com.网络编程.net.tcp;
+package com.网络编程.net.tcp;
 
 import java.io.*;
 import java.net.ServerSocket;

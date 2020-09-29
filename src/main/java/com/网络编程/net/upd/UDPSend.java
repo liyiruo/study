@@ -1,4 +1,4 @@
-package main.java.com.网络编程.net.upd;
+package com.网络编程.net.upd;
 
 import java.io.IOException;
 import java.net.*;

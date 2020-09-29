@@ -1,4 +1,4 @@
-package main.java.com.网络编程.net.tcp_img_thread;
+package com.网络编程.net.tcp_img_thread;
 
 import java.io.*;
 

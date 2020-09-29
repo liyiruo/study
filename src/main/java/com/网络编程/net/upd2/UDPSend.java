@@ -1,4 +1,4 @@
-package main.java.com.网络编程.net.upd2;
+package com.网络编程.net.upd2;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

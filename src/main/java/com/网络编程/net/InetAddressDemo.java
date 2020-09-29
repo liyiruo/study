@@ -1,4 +1,4 @@
-package main.java.com.网络编程.net;
+package com.网络编程.net;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
