@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author liyiruo
  */
-public class MyTest {
+public class ClassLoaderTest {
     public static void main(String[] args) {
         //类加载器
         ClassLoader c = new ClassLoader();
