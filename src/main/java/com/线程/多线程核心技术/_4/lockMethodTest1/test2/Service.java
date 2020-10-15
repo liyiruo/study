@@ -1,4 +1,4 @@
-package com.线程.多线程核心技术._4.test2;
+package com.线程.多线程核心技术._4.lockMethodTest1.test2;
 
 import java.util.concurrent.locks.ReentrantLock;
 
