@@ -1,4 +1,4 @@
-package com.线程.多线程核心技术._4.lockMethodTest1;
+package com.线程.多线程核心技术._4.lockMethodTest1.test1;
 
 /**
  * @author liyiruo
