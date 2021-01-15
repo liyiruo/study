@@ -23,5 +23,15 @@
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-catalina</artifactId>
+            <version>7.0.37</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.spafka</groupId>
+            <artifactId>springboot-starter-netty</artifactId>
+            <version>0.2.1</version>
+        </dependency>
     </dependencies>
 </project>
