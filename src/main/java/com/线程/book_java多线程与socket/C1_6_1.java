@@ -8,11 +8,11 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author liyiruo
- * @Description
+ * @Description data 是全局变量，
  * @Date 2020/10/20 11:36
  */
-public class C1_6_1 implements Runnable{
-    public static final Set<Integer> data=new HashSet<>();
+public class C1_6_1 implements Runnable {
+    public static final Set<Integer> data = new HashSet<>();
     public static int count;
     protected int page;
 
@@ -22,16 +22,18 @@ public class C1_6_1 implements Runnable{
 
     @Override
     public void run() {
-        int v=page*10000;
+        int v = page * 10000;
         for (int i = 0; i < 10000; i++) {
-            data.add(i);
-            count++;
+            synchronized (data) {
+                data.add(i);
+                count++;
+            }
             Thread.yield();
         }
     }
 
     public static void main(String[] args) {
-        ExecutorService es=Executors.newFixedThreadPool(5);
+        ExecutorService es = Executors.newFixedThreadPool(5);
         for (int i = 0; i < 20; i++) {
             es.execute(new C1_6_1(i));
         }
@@ -42,7 +44,7 @@ public class C1_6_1 implements Runnable{
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("size="+data.size());
-        System.out.println("count="+count);
+        System.out.println("size=" + data.size());
+        System.out.println("count=" + count);
     }
 }
