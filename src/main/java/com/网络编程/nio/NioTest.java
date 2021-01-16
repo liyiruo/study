@@ -7,8 +7,10 @@ import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
 import java.nio.channels.*;
+import java.nio.charset.Charset;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.SortedMap;
 
 /**
  * @author liyiruo
@@ -119,6 +121,9 @@ ch.socket().bind (new InetSocketAddress (somelocalport));
         while (byteBuffer2.hasRemaining()){
             SinkChannel.write(byteBuffer2);
         }
+
+        SortedMap<String, Charset> map = Charset.availableCharsets();
+
 
     }
 }
