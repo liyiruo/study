@@ -30,16 +30,22 @@ public class ChannelDemo {
         System.out.println("Copy Data finished.");
     }
 
+    /**
+     * 复制文件的方法
+     * @param src Channel 数据源
+     * @param dest Channel 数据目的
+     * @throws IOException
+     */
     private static void copyData(ReadableByteChannel src, WritableByteChannel dest) throws IOException {
+        //创建一个buffer，设置buffer长度
         ByteBuffer buffer = ByteBuffer.allocate(20 * 1024);
+        //循环将数据源读到buffer中，反转后，将buffer写入到目标channel，最后清空buffer
         while (src.read(buffer) != -1) {
-
             buffer.flip();
             while (buffer.hasRemaining()) {
                 dest.write(buffer);
             }
             buffer.clear();
-
         }
     }
 
