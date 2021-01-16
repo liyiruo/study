@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 
 /**
  * @author liyiruo
- * @Description BufferedReader从testout.txt文件中读取行的简单示例：
+ * @Description BufferedReader从testout.txt文件中读取行的简单示例
  * @Date 2021/1/16 上午12:43
  */
 public class BufferedReaderDemo {
