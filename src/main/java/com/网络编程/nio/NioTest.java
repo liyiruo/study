@@ -4,10 +4,9 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.channels.DatagramChannel;
-import java.nio.channels.FileChannel;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
+import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
+import java.nio.channels.*;
 
 /**
  * @author liyiruo
@@ -63,5 +62,15 @@ ch.socket().bind (new InetSocketAddress (somelocalport));
         //ServerSocketChannel ch = ServerSocketChannel.close();
         //ch.socket().bind (new InetSocketAddress (somelocalport));
 
+        //分配缓冲区
+        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+        CharBuffer charBuffer = CharBuffer.allocate(1024);
+        //从通道中读取数据
+        char c = charBuffer.get();
+
+        //分射读取操作
+        ScatteringByteChannel sc=null;
+        //聚集写入操作
+        GatheringByteChannel gc=null;
     }
 }
