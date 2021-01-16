@@ -18,7 +18,6 @@ public class BufferedReaderDemo {
         Path file = null;
         BufferedReader bufferedReader = null;
         String relativelyPath = System.getProperty("user.dir");
-
         try {
             file = Paths.get(relativelyPath.concat("/testout.txt"));
             InputStream inputStream = Files.newInputStream(file);
