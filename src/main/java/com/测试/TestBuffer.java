@@ -34,6 +34,6 @@ public class TestBuffer {
                 return false;
             }
         };*/
-
+        Object object = null;
     }
 }
