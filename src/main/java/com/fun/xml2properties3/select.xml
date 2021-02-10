@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <select id="a">
+        <string value="1" lable="111">1111</string>
+        <string value="2" lable="222">2222</string>
+        <string value="9" lable="999">9999</string>
+    </select>
+
+    <select id="b">
+        <string value="3" lable="333">3333</string>
+        <string value="4" lable="444">4444</string>
+    </select>
+    <select id="c">
+        <string value="5" lable="555">5555</string>
+        <string value="6" lable="666">6666</string>
+    </select>
+</root>
