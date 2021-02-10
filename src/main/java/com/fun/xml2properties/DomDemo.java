@@ -1,4 +1,4 @@
-package com.fun;
+package com.fun.xml2properties;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -49,7 +49,7 @@ public class DomDemo {
         //2.创建DocumentBuilder对象
         try {
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document d = builder.parse("/Users/liyiruo/IdeaProjects/study/src/main/java/com/fun/demo.xml");
+            Document d = builder.parse("/Users/liyiruo/IdeaProjects/study/src/main/java/com/fun/xml2properties/demo.xml");
             NodeList sList = d.getElementsByTagName("student");
             //element(sList);
             node(sList);
