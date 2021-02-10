@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources >
+    <string name="account_remove_category_label" value="111">删除连接</string>
+    <string name="account_server_url_label" value="3333">服务器</string>
+</resources>
