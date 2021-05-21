@@ -39,5 +39,6 @@ public class TestResponse extends HttpServlet {
         //打开一个网页
         out.print("<script type=\"text/javascript\">window.parent.document.location.href='"+s+"'</script>");
 
+        out.close();
     }
 }
